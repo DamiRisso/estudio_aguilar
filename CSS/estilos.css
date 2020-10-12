@@ -1,0 +1,327 @@
+@charset "UTF-8";
+/* Colores */
+/* Box Modeling */
+/*BODY*/
+/*SECTION*/
+/*BOTONES*/
+/*MENU*/
+/*FOOTER*/
+/*CARTAS*/
+/*SERVICIOS*/
+/*FOTOS*/
+/* Tipografias Tamaños */
+.textoBlanco {
+  color: white; }
+
+.textoAzul {
+  color: #073B4C; }
+
+/*Media querys*/
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 16px; }
+  #quienesSomosImg figcaption {
+    display: inline-block;
+    width: 12rem; }
+  h1 {
+    font-size: 2rem; }
+  #botonParticular h2 {
+    font-size: 1.6rem; }
+  #botonEmpresa h2 {
+    font-size: 1.6rem; }
+  h3 {
+    font-size: 1.3rem; } }
+
+body {
+  font-size: 16px;
+  background-color: #118AB2;
+  background-image: url("../Imagenes/fondo.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.azul--oscuro {
+  color: #073B4C; }
+
+.titulosVerdes {
+  color: #06D6A0; }
+
+.titulosAmarillos {
+  color: #FFD166; }
+
+header {
+  display: block;
+  justify-content: center; }
+  header .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: space-around;
+    align-items: center; }
+    header .header .header__logo {
+      width: 15%; }
+    header .header .header__titulo {
+      font-size: 2.5rem;
+      color: white; }
+      header .header .header__titulo .header__titulo--titulo {
+        animation-name: titulo;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+        position: relative; }
+
+@keyframes titulo {
+  0% {
+    left: 150px;
+    opacity: 0; }
+  85% {
+    left: -15px;
+    opacity: 1; }
+  100% {
+    left: 0px; } }
+      header .header .header__titulo .header__titulo--subtitulo {
+        animation-name: subtitulo;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+        position: relative; }
+
+@keyframes subtitulo {
+  0% {
+    right: 150px;
+    opacity: 0; }
+  85% {
+    right: -15px;
+    opacity: 1; }
+  100% {
+    right: 0px; } }
+
+.menu {
+  background-color: #073B4C;
+  border-radius: 1.5rem;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  width: 85%;
+  margin: 2% auto 5% auto; }
+
+section {
+  background-color: #073B4C;
+  width: 100%;
+  padding: 2% 2% 2% 2%;
+  margin: 2% 0% 2% 0%; }
+  section .botones {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    section .botones .botones__particular {
+      background-color: #06D6A0;
+      border-radius: 1.5rem;
+      padding: 1% 2% 1% 2%;
+      margin: 2% 2% 2% 2%;
+      text-align: center;
+      box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+      width: 25rem; }
+      section .botones .botones__particular a {
+        text-decoration: none;
+        color: #073B4C; }
+        section .botones .botones__particular a :hover {
+          text-decoration: none;
+          color: #073B4C; }
+        section .botones .botones__particular a :visited {
+          text-decoration: none;
+          color: #073B4C; }
+        section .botones .botones__particular a :link {
+          text-decoration: none;
+          color: #073B4C; }
+    section .botones #botonParticular {
+      transition: background 1s ease-in-out; }
+    section .botones #botonParticular:hover {
+      background-image: url("../Imagenes/particulares-boton.jpg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    section .botones .botones__empresa {
+      background-color: #FFD166;
+      border-radius: 1.5rem;
+      padding: 1% 2% 1% 2%;
+      margin: 2% 2% 2% 2%;
+      text-align: center;
+      box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+      width: 25rem;
+      transition: background 1s ease-in-out; }
+      section .botones .botones__empresa a {
+        text-decoration: none;
+        color: #073B4C; }
+        section .botones .botones__empresa a :hover {
+          text-decoration: none;
+          color: #073B4C; }
+        section .botones .botones__empresa a :visited {
+          text-decoration: none;
+          color: #073B4C; }
+        section .botones .botones__empresa a :link {
+          text-decoration: none;
+          color: #073B4C; }
+    section .botones #botonEmpresa:hover {
+      background-image: url("../Imagenes/sala-de-conferencias2.jpg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  section .quienesSomosImg figure {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    section .quienesSomosImg figure .quienesSomosImg__imagen {
+      width: 10rem;
+      margin: 5px; }
+    section .quienesSomosImg figure .quienesSomosImg__texto {
+      display: inline;
+      width: 16rem;
+      color: white;
+      font-size: 1.25rem; }
+  section p {
+    color: white;
+    font-size: 1.25rem; }
+
+.particulares {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+  .particulares .particulares__carta, .particulares .empresa .empresa__carta, .empresa .particulares .empresa__carta {
+    margin: 5% 5% 5% 5%;
+    border-radius: 0rem 0rem 1rem 1rem;
+    border: none;
+    background: none;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75); }
+    .particulares .particulares__carta .card-body, .particulares .empresa .empresa__carta .card-body, .empresa .particulares .empresa__carta .card-body {
+      background: #073B4CCC;
+      border-radius: 0rem 0rem 1rem 1rem; }
+      .particulares .particulares__carta .card-body .card-titulo, .particulares .empresa .empresa__carta .card-body .card-titulo, .empresa .particulares .empresa__carta .card-body .card-titulo {
+        color: #06D6A0;
+        font-size: 2rem; }
+      .particulares .particulares__carta .card-body .card-text, .particulares .empresa .empresa__carta .card-body .card-text, .empresa .particulares .empresa__carta .card-body .card-text {
+        font-size: 1.25rem; }
+
+.contenedorContPart .contacto__particulares, .contenedorContPart .contenedorContEmp .contacto__empresa, .contenedorContEmp .contenedorContPart .contacto__empresa {
+  background-color: #06D6A0;
+  border-radius: 1.5rem;
+  padding: 1% 2% 1% 2%;
+  margin: 2% auto 2% auto;
+  text-align: center;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  width: 25rem; }
+  .contenedorContPart .contacto__particulares .contacto__particulares--titulo a, .contenedorContPart .contenedorContEmp .contacto__empresa .contacto__particulares--titulo a, .contenedorContEmp .contenedorContPart .contacto__empresa .contacto__particulares--titulo a {
+    text-decoration: none;
+    color: #073B4C; }
+    .contenedorContPart .contacto__particulares .contacto__particulares--titulo a :hover, .contenedorContPart .contenedorContEmp .contacto__empresa .contacto__particulares--titulo a :hover, .contenedorContEmp .contenedorContPart .contacto__empresa .contacto__particulares--titulo a :hover {
+      text-decoration: none;
+      color: #073B4C; }
+    .contenedorContPart .contacto__particulares .contacto__particulares--titulo a :visited, .contenedorContPart .contenedorContEmp .contacto__empresa .contacto__particulares--titulo a :visited, .contenedorContEmp .contenedorContPart .contacto__empresa .contacto__particulares--titulo a :visited {
+      text-decoration: none;
+      color: #073B4C; }
+    .contenedorContPart .contacto__particulares .contacto__particulares--titulo a :link, .contenedorContPart .contenedorContEmp .contacto__empresa .contacto__particulares--titulo a :link, .contenedorContEmp .contenedorContPart .contacto__empresa .contacto__particulares--titulo a :link {
+      text-decoration: none;
+      color: #073B4C; }
+
+.empresa {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+  .empresa .empresa__carta {
+    margin: 5% 5% 5% 5%;
+    border-radius: 0rem 0rem 1rem 1rem;
+    border: none;
+    background: none;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75); }
+    .empresa .empresa__carta .card-body {
+      background: #073B4CCC;
+      border-radius: 0rem 0rem 1rem 1rem; }
+      .empresa .empresa__carta .card-body .card-titulo {
+        color: #FFD166;
+        font-size: 2rem; }
+      .empresa .empresa__carta .card-body .card-text {
+        font-size: 1.25rem; }
+
+.contenedorContEmp .contacto__empresa {
+  background-color: #FFD166;
+  border-radius: 1.5rem;
+  padding: 1% 2% 1% 2%;
+  margin: 2% auto 2% auto;
+  text-align: center;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  width: 25rem; }
+  .contenedorContEmp .contacto__empresa .contacto__empresa--titulo a {
+    text-decoration: none;
+    color: #073B4C; }
+    .contenedorContEmp .contacto__empresa .contacto__empresa--titulo a :hover {
+      text-decoration: none;
+      color: #073B4C; }
+    .contenedorContEmp .contacto__empresa .contacto__empresa--titulo a :visited {
+      text-decoration: none;
+      color: #073B4C; }
+    .contenedorContEmp .contacto__empresa .contacto__empresa--titulo a :link {
+      text-decoration: none;
+      color: #073B4C; }
+
+/*Contacto*/
+.contacto {
+  background: #073B4CCC;
+  padding: 2% 2% 2% 2%;
+  border-radius: 3rem;
+  text-align: center;
+  margin: 0.5rem; }
+  .contacto .contacto__whatsapp {
+    background-color: #06D6A0;
+    border-radius: 1.5rem;
+    padding: 1% 2% 1% 2%;
+    margin: 2% auto 2% auto;
+    text-align: center;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    width: 80%; }
+  .contacto a:hover {
+    text-decoration: none; }
+
+.contacto__mapa {
+  background: #073B4CCC;
+  padding: 2% 2% 2% 2%;
+  border-radius: 3rem;
+  text-align: center;
+  margin: 0.5rem; }
+  .contacto__mapa h4 {
+    display: inline; }
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 2% 0% 0% 0%;
+  width: 100%;
+  padding: 2rem; }
+  .footer .footer__titulo {
+    color: #073B4C; }
+  .footer .footer__subtitulo {
+    color: #073B4C; }
+  .footer .footer__redes {
+    max-width: 15rem;
+    display: inline; }
+    .footer .footer__redes a img {
+      width: 3rem; }
+  .footer #wppFooter {
+    width: 4em;
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+    text-align: center;
+    margin-right: 0px; }
+
+@media only screen and (max-width: 576px) {
+  body {
+    font-size: 12px;
+    background-image: url("../Imagenes/fondo-responsive.jpg"); }
+  #quienesSomosImg figcaption {
+    display: inline-block;
+    width: 10rem; }
+  h1 {
+    font-size: 2rem; }
+  #botonParticular h2 {
+    font-size: 1.6rem; }
+  #botonEmpresa h2 {
+    font-size: 1.6rem; }
+  h3 {
+    font-size: 1.3rem; } }

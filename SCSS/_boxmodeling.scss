@@ -1,0 +1,45 @@
+/* Box Modeling */
+
+/*BODY*/
+$body-background: url("../Imagenes/fondo.jpg");
+$body-background-position:  center center;
+$body-background-attachment: fixed;
+$body-background-repeat: no-repeat;
+$body-background-size: cover;
+
+/*SECTION*/
+$section-width: 100%;
+$section-padding: 2% 2% 2% 2%;
+$section-margin: 2% 0% 2% 0%;
+
+/*BOTONES*/
+$radio-botones: 1.5rem;
+$botones-padding: 1% 2% 1% 2%;
+$botones-margin: 2% 2% 2% 2%;
+$botones-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+$botones-index-width: 25rem;
+$botones-transition: background 1s ease-in-out;
+
+/*MENU*/
+$width-menu: 85%;
+$menu-margin: 2% auto 5% auto;
+
+/*FOOTER*/
+$footer-margin: 2% 0% 0% 0%;
+$footer-padding: 2rem;
+
+/*CARTAS*/
+$carta-margin: 5% 5% 5% 5%;
+$carta-radius: 0rem 0rem 1rem 1rem;
+$carta-border: none;
+
+/*SERVICIOS*/
+$servicios-display: flex;
+$servicios-flex-flow: row wrap;
+$servicios-justify: space-around;
+
+/*FOTOS*/
+$fotos-perfiles-width: 10rem;
+
+
+

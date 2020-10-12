@@ -1,0 +1,428 @@
+@import "colores";
+@import "boxmodeling";
+@import "tipografia";
+@import "mediaQuerys";
+
+$base-font-size: 16px;
+
+body {
+	font-size: $base-font-size;
+	background-color: $color-azul-claro;
+	background-image: $body-background;
+	background-position: $body-background-position;
+	background-attachment: $body-background-attachment;
+	background-repeat: $body-background-repeat;
+	background-size: $body-background-size;
+}
+
+.azul--oscuro {
+	color: $color-azul-oscuro;
+}
+
+.titulosVerdes {
+	color: $color-verde;
+}
+
+.titulosAmarillos {
+	color: $color-amarillo;
+}
+
+header {
+	display: block;
+	justify-content: center;
+
+	.header {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+	justify-content: space-around;
+	align-items: center;
+		.header__logo {
+		width: 15%;
+		}
+		.header__titulo {
+		font-size: $tamaño-titulo-header;
+		color: $color-blanco;
+			.header__titulo--titulo {
+				animation-name: titulo;
+				animation-duration: 1.5s;
+				animation-timing-function: ease-in-out;
+				position: relative;
+					}
+
+				@keyframes titulo {
+					0% {
+						left: 150px;
+						opacity: 0;
+						}
+
+					85% {
+						left: -15px;
+						opacity: 1;
+						}
+
+					100% {
+						left: 0px;
+						}
+					}
+			.header__titulo--subtitulo{
+				animation-name: subtitulo;
+				animation-duration: 1.5s;
+				animation-timing-function: ease-in-out;
+				position: relative;
+			} 
+
+			@keyframes subtitulo {
+				0% {
+					right: 150px;
+					opacity: 0;
+						}
+
+				85% {
+					right: -15px;
+					opacity: 1;
+				}
+
+				100% {
+					right: 0px;
+				}
+			}
+				
+		}
+	}
+}
+	
+
+	.menu {
+		background-color: $color-azul-oscuro;
+		border-radius: $radio-botones;
+		box-shadow: $botones-shadow;
+		width: $width-menu;
+		margin: $menu-margin;
+	}
+
+
+
+
+section {
+	background-color: $color-azul-oscuro;
+	width: $section-width;
+	padding: $section-padding;
+	margin: $section-margin;
+
+	.botones {
+		display: flex; 
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		.botones__particular {
+			background-color: $color-verde;
+			border-radius: $radio-botones;
+			padding: $botones-padding;
+			margin: $botones-margin;
+			text-align: $botones-text-align;
+			box-shadow: $botones-shadow;
+			width: $botones-index-width;
+
+			a {
+				text-decoration: none;
+				color: $color-azul-oscuro;
+				:hover {
+				text-decoration: none;
+				color: $color-azul-oscuro;
+				}
+				:visited { 
+				text-decoration: none;
+				color: $color-azul-oscuro;
+				}
+				:link {
+				text-decoration:none;
+				color: $color-azul-oscuro;
+				}
+			}
+		}
+		#botonParticular{
+		transition: $botones-transition;	}
+
+		#botonParticular:hover {
+			background-image: url("../Imagenes/particulares-boton.jpg");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover; }
+		
+		.botones__empresa {
+			background-color: $color-amarillo;
+			border-radius: $radio-botones;
+			padding: $botones-padding;
+			margin: $botones-margin;
+			text-align: $botones-text-align;
+			box-shadow: $botones-shadow;
+			width: $botones-index-width;
+			transition: background 1s ease-in-out;
+
+				a {
+					text-decoration: none;
+					color: $color-azul-oscuro;
+					:hover {
+					text-decoration: none;
+					color: $color-azul-oscuro;
+					}
+					:visited { 
+					text-decoration: none;
+					color: $color-azul-oscuro;
+					}
+					:link {
+					text-decoration:none;
+					color: $color-azul-oscuro;
+					}
+				}
+			}
+
+		#botonEmpresa:hover {
+			background-image: url("../Imagenes/sala-de-conferencias2.jpg");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover; }
+	}
+
+	.quienesSomosImg {
+		figure {
+			display:flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			.quienesSomosImg__imagen {
+				width: $fotos-perfiles-width;
+				margin: 5px;
+			}
+			.quienesSomosImg__texto {
+				display:inline;
+				width: 16rem;
+				color: $color-blanco;
+				font-size: $tamaño-parrafos;
+			}
+		}
+	}
+	p {
+		color: $color-blanco;
+		font-size: $tamaño-parrafos;
+	}
+}
+
+.particulares {
+		display: $servicios-display;
+		flex-flow: $servicios-flex-flow;
+		justify-content: $servicios-justify;
+
+		.particulares__carta {
+			margin: $carta-margin;
+			border-radius: $carta-radius;
+			border: $carta-border;
+			background: none;
+			box-shadow: $botones-shadow;
+
+			.card-body {
+				background: $carta-background;
+				border-radius: $carta-radius;
+					.card-titulo {
+						color: $color-verde;
+						font-size: $tamaño-titulos;
+					}
+					.card-text {
+						font-size: $tamaño-parrafos;
+					} 
+			}
+		}
+	}
+
+
+.contenedorContPart {
+	.contacto__particulares {
+		background-color: $color-verde;
+		border-radius: $radio-botones;
+		padding: $botones-padding;
+		margin: 2% auto 2% auto;
+		text-align: $botones-text-align;
+		box-shadow: $botones-shadow;
+		width: $botones-index-width;
+
+		.contacto__particulares--titulo {
+			a {
+				text-decoration: none;
+				color: $color-azul-oscuro;
+				:hover {
+				text-decoration: none;
+				color: $color-azul-oscuro;
+				}
+				:visited { 
+				text-decoration: none;
+				color: $color-azul-oscuro;
+				}
+				:link {
+				text-decoration:none;
+				color: $color-azul-oscuro;
+				}
+			}
+		} 
+	}
+}
+
+
+	.empresa {
+		display: $servicios-display;
+		flex-flow: $servicios-flex-flow;
+		justify-content: $servicios-justify;
+
+		.empresa__carta {
+			@extend.particulares__carta;
+			margin: $carta-margin;
+			border-radius: $carta-radius;
+			border: $carta-border;
+			background: none;
+			box-shadow: $botones-shadow;
+
+			.card-body {
+				background: $carta-background;
+				border-radius: $carta-radius;
+					.card-titulo {
+						color: $color-amarillo;
+						font-size: $tamaño-titulos;
+					}
+					.card-text {
+						font-size: $tamaño-parrafos;
+					} 
+			}
+		}
+	}
+
+.contenedorContEmp {
+	.contacto__empresa {
+		@extend.contacto__particulares;
+		background-color: $color-amarillo;
+		border-radius: $radio-botones;
+		padding: $botones-padding;
+		margin: 2% auto 2% auto;
+		text-align: $botones-text-align;
+		box-shadow: $botones-shadow;
+		width: $botones-index-width;
+
+		.contacto__empresa--titulo {
+			a {
+				text-decoration: none;
+				color: $color-azul-oscuro;
+				:hover {
+				text-decoration: none;
+				color: $color-azul-oscuro;
+				}
+				:visited { 
+				text-decoration: none;
+				color: $color-azul-oscuro;
+				}
+				:link {
+				text-decoration:none;
+				color: $color-azul-oscuro;
+				}
+			}
+		}
+	}
+}
+
+/*Contacto*/
+
+.contacto {
+	background: $carta-background;
+	padding: $section-padding;
+	border-radius: 3rem;
+	text-align: center;
+	margin: 0.5rem;
+	.contacto__whatsapp {
+		background-color: $color-verde;
+		border-radius: $radio-botones;
+		padding: $botones-padding;
+		margin: 2% auto 2% auto;
+		text-align: $botones-text-align;
+		box-shadow: $botones-shadow;
+		width: 80%;
+	}	
+	a:hover {
+		text-decoration: none;
+			}
+}
+
+
+.contacto__mapa {
+	background: $carta-background;
+	padding: $section-padding;
+	border-radius: 3rem;
+	text-align: center;
+	margin: 0.5rem;
+	h4 {
+	display: inline;
+	}
+}
+
+
+
+.footer {
+	background-color: $footer-background;
+	margin: $footer-margin;
+	width: $section-width;
+	padding: $footer-padding;
+
+	.footer__titulo {
+		color: $color-azul-oscuro;
+	}
+
+	.footer__subtitulo {
+	color: $color-azul-oscuro;
+	}
+
+	.footer__redes {
+	max-width: 15rem;
+	display: inline;
+		a {
+			img {
+				width: 3rem;
+			}
+		}
+	}
+
+	#wppFooter {
+		width: 4em;
+		position:fixed;
+		bottom:5px;
+		right:20px;
+		text-align:center;
+		margin-right: 0px; }
+}
+
+@media only screen and (max-width: 576px) {
+
+body {
+	font-size: 12px;
+	background-image: url("../Imagenes/fondo-responsive.jpg");
+}
+
+#quienesSomosImg figcaption {
+	display: inline-block;
+	width: 10rem;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+
+#botonParticular h2 {
+	font-size: 1.6rem;
+}
+
+#botonEmpresa h2 {
+	font-size: 1.6rem;
+}
+
+
+h3 {
+	font-size: 1.3rem;
+}
+}

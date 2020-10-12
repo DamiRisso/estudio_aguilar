@@ -1,0 +1,31 @@
+/*Media querys*/
+
+@media only screen and (max-width: 992px) {
+body {
+	font-size: 16px;
+}
+
+#quienesSomosImg figcaption {
+	display: inline-block;
+	width: 12rem;
+ 
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+#botonParticular h2 {
+	font-size: 1.6rem;
+}
+
+#botonEmpresa h2 {
+	font-size: 1.6rem;
+}
+
+h3 {
+	font-size: 1.3rem;
+}
+
+}
+
