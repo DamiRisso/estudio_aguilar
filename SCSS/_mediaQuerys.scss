@@ -2,7 +2,7 @@
 
 @media only screen and (max-width: 992px) {
 body {
-	font-size: 16px;
+	font-size: 18px;
 }
 
 #quienesSomosImg figcaption {
@@ -27,5 +27,14 @@ h3 {
 	font-size: 1.3rem;
 }
 
+.titulo__noticia {
+	padding-left:1.5rem;
+	padding-right: 1.5rem;
+}
+.parrafo__noticia {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	line-heigh: 3rem;
+}
 }
 

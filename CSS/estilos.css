@@ -16,24 +16,8 @@
 .textoAzul {
   color: #073B4C; }
 
-/*Media querys*/
-@media only screen and (max-width: 992px) {
-  body {
-    font-size: 16px; }
-  #quienesSomosImg figcaption {
-    display: inline-block;
-    width: 12rem; }
-  h1 {
-    font-size: 2rem; }
-  #botonParticular h2 {
-    font-size: 1.6rem; }
-  #botonEmpresa h2 {
-    font-size: 1.6rem; }
-  h3 {
-    font-size: 1.3rem; } }
-
 body {
-  font-size: 16px;
+  font-size: 22px;
   background-color: #118AB2;
   background-image: url("../Imagenes/fondo.jpg");
   background-position: center center;
@@ -101,6 +85,11 @@ header {
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
   width: 85%;
   margin: 2% auto 5% auto; }
+  .menu .nav-item {
+    font-size: 1.2em; }
+
+.titulo__boton {
+  font-weight: 700; }
 
 section {
   background-color: #073B4C;
@@ -118,8 +107,7 @@ section {
       padding: 1% 2% 1% 2%;
       margin: 2% 2% 2% 2%;
       text-align: center;
-      box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
-      width: 25rem; }
+      box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75); }
       section .botones .botones__particular a {
         text-decoration: none;
         color: #073B4C; }
@@ -133,21 +121,22 @@ section {
           text-decoration: none;
           color: #073B4C; }
     section .botones #botonParticular {
-      transition: background 1s ease-in-out; }
+      transition: background 1s ease-in-out, width 1.5s ease-in-out;
+      width: 25rem;
+      height: 7rem; }
     section .botones #botonParticular:hover {
       background-image: url("../Imagenes/particulares-boton.jpg");
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: cover; }
+      background-size: cover;
+      width: 28rem; }
     section .botones .botones__empresa {
       background-color: #FFD166;
       border-radius: 1.5rem;
       padding: 1% 2% 1% 2%;
       margin: 2% 2% 2% 2%;
       text-align: center;
-      box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
-      width: 25rem;
-      transition: background 1s ease-in-out; }
+      box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75); }
       section .botones .botones__empresa a {
         text-decoration: none;
         color: #073B4C; }
@@ -160,26 +149,75 @@ section {
         section .botones .botones__empresa a :link {
           text-decoration: none;
           color: #073B4C; }
+    section .botones #botonEmpresa {
+      transition: background 1s ease-in-out, width 1.5s ease-in-out;
+      width: 25rem;
+      height: 7rem; }
     section .botones #botonEmpresa:hover {
       background-image: url("../Imagenes/sala-de-conferencias2.jpg");
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: cover; }
-  section .quienesSomosImg figure {
+      background-size: cover;
+      width: 28rem; }
+  section .quienesSomosTexto__parrafo {
+    font-size: 1em; }
+  section .quienesSomosImg #contenedorImgFig {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; }
-    section .quienesSomosImg figure .quienesSomosImg__imagen {
+    flex-wrap: wrap;
+    transition: all 0.5s ease-in-out;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    justify-content: space-evenly;
+    align-items: center; }
+    section .quienesSomosImg #contenedorImgFig .quienesSomosImg__imagen {
       width: 10rem;
       margin: 5px; }
-    section .quienesSomosImg figure .quienesSomosImg__texto {
+    section .quienesSomosImg #contenedorImgFig .textoOculto {
+      display: none; }
+    section .quienesSomosImg #contenedorImgFig .quienesSomosImg__texto {
       display: inline;
       width: 16rem;
       color: white;
-      font-size: 1.25rem; }
+      font-size: 1.5rem; }
+  section .quienesSomosImg #contenedorImgFig:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: row; }
+    section .quienesSomosImg #contenedorImgFig:hover .textoOculto {
+      display: inline;
+      width: 16rem; }
+    section .quienesSomosImg #contenedorImgFig:hover .quienesSomosImg__texto {
+      display: none; }
+  section .quienesSomosImg #contenedorImgAg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: all 1s ease-in-out;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    justify-content: space-evenly;
+    align-items: center; }
+    section .quienesSomosImg #contenedorImgAg .quienesSomosImg__imagen {
+      width: 10rem;
+      margin: 5px; }
+    section .quienesSomosImg #contenedorImgAg .textoOculto {
+      display: none; }
+    section .quienesSomosImg #contenedorImgAg .quienesSomosImg__texto {
+      display: inline;
+      width: 16rem;
+      color: white;
+      font-size: 1.5rem; }
+  section .quienesSomosImg #contenedorImgAg:hover {
+    background-color: rgba(0, 0, 0, 0.7); }
+    section .quienesSomosImg #contenedorImgAg:hover .textoOculto {
+      display: inline;
+      width: 16rem; }
+    section .quienesSomosImg #contenedorImgAg:hover .quienesSomosImg__texto {
+      display: none; }
   section p {
     color: white;
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    margin-bottom: 3rem; }
 
 .particulares {
   display: flex;
@@ -193,12 +231,17 @@ section {
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75); }
     .particulares .particulares__carta .card-body, .particulares .empresa .empresa__carta .card-body, .empresa .particulares .empresa__carta .card-body {
       background: #073B4CCC;
-      border-radius: 0rem 0rem 1rem 1rem; }
+      border-radius: 0rem 0rem 1rem 1rem;
+      transition: all 0.4s ease-in-out; }
       .particulares .particulares__carta .card-body .card-titulo, .particulares .empresa .empresa__carta .card-body .card-titulo, .empresa .particulares .empresa__carta .card-body .card-titulo {
         color: #06D6A0;
         font-size: 2rem; }
       .particulares .particulares__carta .card-body .card-text, .particulares .empresa .empresa__carta .card-body .card-text, .empresa .particulares .empresa__carta .card-body .card-text {
         font-size: 1.25rem; }
+    .particulares .particulares__carta .card-body:hover, .particulares .empresa .empresa__carta .card-body:hover, .empresa .particulares .empresa__carta .card-body:hover {
+      background-color: rgba(0, 0, 0, 0.75); }
+      .particulares .particulares__carta .card-body:hover .card-titulo, .particulares .empresa .empresa__carta .card-body:hover .card-titulo, .empresa .particulares .empresa__carta .card-body:hover .card-titulo {
+        font-size: 2.2rem; }
 
 .contenedorContPart .contacto__particulares, .contenedorContPart .contenedorContEmp .contacto__empresa, .contenedorContEmp .contenedorContPart .contacto__empresa {
   background-color: #06D6A0;
@@ -233,12 +276,17 @@ section {
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75); }
     .empresa .empresa__carta .card-body {
       background: #073B4CCC;
-      border-radius: 0rem 0rem 1rem 1rem; }
+      border-radius: 0rem 0rem 1rem 1rem;
+      transition: all 0.4s ease-in-out; }
       .empresa .empresa__carta .card-body .card-titulo {
         color: #FFD166;
         font-size: 2rem; }
       .empresa .empresa__carta .card-body .card-text {
         font-size: 1.25rem; }
+    .empresa .empresa__carta .card-body:hover {
+      background-color: rgba(0, 0, 0, 0.75); }
+      .empresa .empresa__carta .card-body:hover .card-titulo {
+        font-size: 2.2rem; }
 
 .contenedorContEmp .contacto__empresa {
   background-color: #FFD166;
@@ -261,21 +309,130 @@ section {
       text-decoration: none;
       color: #073B4C; }
 
-/*Contacto*/
+/*-----Novedades---------*/
+.titulo__noticia {
+  margin-top: 3.2rem;
+  font-size: 2rem;
+  padding-right: 3rem;
+  padding-left: 3rem; }
+
+.parrafo__noticia {
+  padding-right: 3rem;
+  padding-left: 3rem;
+  line-height: 3rem; }
+
+/*---------Contacto---------*/
 .contacto {
   background: #073B4CCC;
   padding: 2% 2% 2% 2%;
   border-radius: 3rem;
   text-align: center;
   margin: 0.5rem; }
+  .contacto .contacto__mail {
+    background-color: #06D6A0;
+    border-radius: 1.5rem;
+    padding: 1% 2% 1% 2%;
+    margin: 5% auto 5% auto;
+    text-align: left;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    width: 80%;
+    transition: all 0.5s ease-in-out; }
+    .contacto .contacto__mail .fa-google {
+      color: #073B4C;
+      font-size: 2rem; }
+    .contacto .contacto__mail h4 {
+      display: inline;
+      padding-left: 3%; }
+    .contacto .contacto__mail p {
+      position: absolute;
+      font-size: 0px; }
+  .contacto .contacto__mail:hover {
+    background-color: white;
+    border: 3px solid #ea4335; }
+    .contacto .contacto__mail:hover i {
+      color: #ea4335; }
+    .contacto .contacto__mail:hover h4 {
+      color: #ea4335; }
+    .contacto .contacto__mail:hover p {
+      display: none;
+      font-size: 1rem;
+      color: #ea4335;
+      position: relative;
+      right: 1rem;
+      text-align: left;
+      margin: 0px;
+      padding: 0px; }
+  .contacto .contacto__instagram {
+    background-color: #06D6A0;
+    border-radius: 1.5rem;
+    padding: 1% 2% 1% 2%;
+    margin: 5% auto 5% auto;
+    text-align: left;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    width: 80%;
+    transition: all 0.5s ease-in-out; }
+    .contacto .contacto__instagram .fa-instagram {
+      color: #073B4C;
+      font-size: 2rem; }
+    .contacto .contacto__instagram h4 {
+      display: inline;
+      padding-left: 3%; }
+  .contacto .contacto__instagram:hover {
+    background-color: white;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #515bd4; }
+    .contacto .contacto__instagram:hover .fa-instagram {
+      color: #dd2a7b; }
+    .contacto .contacto__instagram:hover h4 {
+      /*color:  #dd2a7b;*/
+      background: -webkit-linear-gradient(#dd2a7b, #515bd4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+  .contacto .contacto__facebook {
+    background-color: #06D6A0;
+    border-radius: 1.5rem;
+    padding: 1% 2% 1% 2%;
+    margin: 5% auto 5% auto;
+    text-align: left;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    width: 80%;
+    transition: all 0.5s ease-in-out; }
+    .contacto .contacto__facebook .fa-facebook {
+      color: #073B4C;
+      font-size: 2rem; }
+    .contacto .contacto__facebook h4 {
+      display: inline;
+      padding-left: 3%; }
+  .contacto .contacto__facebook:hover {
+    background-color: white;
+    border: 3px solid #3360ff; }
+    .contacto .contacto__facebook:hover .fa-facebook {
+      color: #3360ff; }
+    .contacto .contacto__facebook:hover h4 {
+      color: #3360ff; }
   .contacto .contacto__whatsapp {
     background-color: #06D6A0;
     border-radius: 1.5rem;
     padding: 1% 2% 1% 2%;
-    margin: 2% auto 2% auto;
-    text-align: center;
+    margin: 5% auto 5% auto;
+    text-align: left;
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
-    width: 80%; }
+    width: 80%;
+    transition: all 0.5s ease-in-out; }
+    .contacto .contacto__whatsapp .fa-whatsapp {
+      color: #073B4C;
+      font-size: 2rem; }
+    .contacto .contacto__whatsapp h4 {
+      display: inline;
+      padding-left: 3%; }
+  .contacto .contacto__whatsapp:hover {
+    background-color: white;
+    border: 3px solid #128C7E; }
+    .contacto .contacto__whatsapp:hover .fa-whatsapp {
+      color: #128C7E; }
+    .contacto .contacto__whatsapp:hover h4 {
+      color: #128C7E; }
   .contacto a:hover {
     text-decoration: none; }
 
@@ -325,3 +482,26 @@ section {
     font-size: 1.6rem; }
   h3 {
     font-size: 1.3rem; } }
+
+/*Media querys*/
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 18px; }
+  #quienesSomosImg figcaption {
+    display: inline-block;
+    width: 12rem; }
+  h1 {
+    font-size: 2rem; }
+  #botonParticular h2 {
+    font-size: 1.6rem; }
+  #botonEmpresa h2 {
+    font-size: 1.6rem; }
+  h3 {
+    font-size: 1.3rem; }
+  .titulo__noticia {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+  .parrafo__noticia {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    line-heigh: 3rem; } }
